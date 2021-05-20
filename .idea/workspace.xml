@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98f66c31-45e2-4ae5-ad69-b9f0d5b9e59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JS/main1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/first.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JS/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/license.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JS/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -36,18 +39,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/JS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\OpenServer\domains\test.star.wars\JS" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\test.star.wars\JS" />
       <recent name="C:\OpenServer\domains\test.star.wars" />
+      <recent name="C:\OpenServer\domains\test.star.wars\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OpenServer\domains\test.star.wars" />
+      <recent name="C:\OpenServer\domains\test.star.wars\css" />
+      <recent name="C:\OpenServer\domains\test.star.wars\JS" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -60,14 +68,32 @@
       <updated>1621305402901</updated>
       <workItem from="1621305404072" duration="6353000" />
       <workItem from="1621317138723" duration="8868000" />
-      <workItem from="1621413061861" duration="5165000" />
+      <workItem from="1621413061861" duration="5220000" />
+      <workItem from="1621479917852" duration="10439000" />
     </task>
+    <task id="LOCAL-00001" summary="1">
+      <created>1621418873481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1621418873481</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2478" y="86" key="CommitChangelistDialog2" timestamp="1621418872494">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2478" y="86" key="CommitChangelistDialog2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1621418872494" />
     <state x="821" y="421" width="468" height="371" key="Github.ShareDialog" timestamp="1621336626115">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -76,5 +102,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="776" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1621336631732" />
+    <state x="2472" y="257" key="Vcs.Push.Dialog.v2" timestamp="1621418876255">
+      <screen x="1920" y="0" width="1920" height="1050" />
+    </state>
+    <state x="2472" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1621418876255" />
   </component>
 </project>

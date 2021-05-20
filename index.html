@@ -1,18 +1,188 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport"
 		      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<title>Document</title>
+		<title>Table</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-
-		<ul class="maint-list">
-
-		</ul>
-		<script src="JS/jQuery_3.6.0.js" ></script>
-		<script src="JS/main.js" ></script>
+		<h1>
+			Providers
+		</h1>
+		<p>
+			(An example table + detail view scenario)
+		</p>
+		<input type="search" class="light-table-filter filter" data-table="order-table" placeholder="Filter">
+		<h2 > </h2>
+		<main>
+			<table class="order-table table">
+				<thead>
+					<tr>
+						<th>
+							Provider Name
+						</th>
+						<th>
+							E-mail
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th colspan='3'>
+							Year: 2014
+						</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<tr>
+						<td data-title='Provider Name'>
+							Iacob Geaorgescu
+						</td>
+						<td data-title='E-mail'>
+							e-ail@test-email.com
+						</td>
+						<td class='select'>
+							<a class='button' href='#'>
+								Select
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td data-title='Provider Name'>
+							Julius Neumann
+						</td>
+						<td data-title='E-mail'>
+							e-mal@test-email.com
+						</td>
+						<td class='select'>
+							<a class='button' href='#'>
+								Select
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td data-title='Provider Name'>
+							Christoph Koller
+						</td>
+						<td data-title='E-mail'>
+							e-mai@test-email.com
+						</td>
+						<td class='select'>
+							<a class='button' href='#'>
+								Select
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td data-title='Provider Name'>
+							Bram Lemmens
+						</td>
+						<td data-title='E-mail'>
+							e-mail@tes-email.com
+						</td>
+						<td class='select'>
+							<a class='button' href='#'>
+								Select
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--
+			<div class='detail'>
+				<div class='detail-container'>
+					<dl>
+						<dt>
+							Provider Name
+						</dt>
+						<dd>
+							John Doe
+						</dd>
+						<dt>
+							E-mail
+						</dt>
+						<dd>
+							email@example.com
+						</dd>
+						<dt>
+							City
+						</dt>
+						<dd>
+							Detroit
+						</dd>
+						<dt>
+							Phone-Number
+						</dt>
+						<dd>
+							555-555-5555
+						</dd>
+						<dt>
+							Last Update
+						</dt>
+						<dd>
+							Jun 20 2014
+						</dd>
+						<dt>
+							Notes
+						</dt>
+						<dd>
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat
+							mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper
+							suscipit, posuere a, pede.
+						</dd>
+					</dl>
+				</div>
+				<div class='detail-nav'>
+					<button class='close'>
+						Close
+					</button>
+				</div>
+			</div>
+			-->
+			<div class="detail">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Phone</th>
+							<th>Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>John Doe</td>
+							<td>john.doe@gmail.com</td>
+							<td>0123456789</td>
+							<td>99</td>
+						</tr>
+						<tr>
+							<td>Jane Vanda</td>
+							<td>jane@vanda.org</td>
+							<td>9876543210</td>
+							<td>349</td>
+						</tr>
+						<tr>
+							<td>Alferd Penyworth</td>
+							<td>alfred@batman.com</td>
+							<td>6754328901</td>
+							<td>199</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class='detail-nav'>
+					<button class='close'>
+						Close
+					</button>
+				</div>
+			</div>
+		</main>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src="js/index.js"></script>
 	</body>
 </html>
