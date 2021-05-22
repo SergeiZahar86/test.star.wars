@@ -138,7 +138,7 @@ function fillTableVehicle(VehiclesData) // функция добавления �
 {
     let tbodyVehicles = $("#table-vehicles"); // Получаем узел тела таблицы материалов
     tbodyVehicles.empty();  // отчистка таблицы
-    $.each(VehiclesData, function (i, dat) // Перебираем
+    $.each(VehiclesData.vehicles, function (i, dat) // Перебираем
     {
         var tr = $('<tr>').append(
             $('<td>').text(i + 1),
@@ -156,6 +156,7 @@ function fillTableVehicle(VehiclesData) // функция добавления �
         );
         tbodyVehicles.append(tr);
     });
+    OpenModal();
 }
 
 function getAllHeroes() {
@@ -359,9 +360,9 @@ function getAllData(people) {
 function OpenModal() {
     $('.button, .close').on('click', function (e) {
         let dd = e.target;
-        let ss = $(e.target).attr("id");
+        let ss = $(e.target).attr('id');
         console.log(dd);
-        console.log(ss);
+        fillTableVehicle(Heros[ss]);
         //console.log(ss);
         e.preventDefault();
         $('.detail, html, body').toggleClass('open');
