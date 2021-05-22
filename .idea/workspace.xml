@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98f66c31-45e2-4ae5-ad69-b9f0d5b9e59f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/JS/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/license.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JS/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/JS/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +41,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/JS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -70,6 +74,10 @@
       <workItem from="1621317138723" duration="8868000" />
       <workItem from="1621413061861" duration="5220000" />
       <workItem from="1621479917852" duration="10439000" />
+      <workItem from="1621518460709" duration="121000" />
+      <workItem from="1621667570191" duration="6032000" />
+      <workItem from="1621678853566" duration="196000" />
+      <workItem from="1621679178127" duration="24060000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1621418873481</created>
@@ -102,9 +110,21 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="776" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1050/1920.0.1920.1050@0.0.1920.1050" timestamp="1621336631732" />
+    <state x="370" y="145" key="SettingsEditor" timestamp="1621673729332">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="370" y="145" key="SettingsEditor/62.0.1474.864/1982.0.1858.1080@62.0.1474.864" timestamp="1621673729332" />
     <state x="2472" y="257" key="Vcs.Push.Dialog.v2" timestamp="1621418876255">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="2472" y="257" key="Vcs.Push.Dialog.v2/0.0.1920.1050/1920.0.1920.1050@1920.0.1920.1050" timestamp="1621418876255" />
+    <state x="456" y="197" key="run.anything.popup" timestamp="1621682660950">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="456" y="197" key="run.anything.popup/62.0.1474.864/1982.0.1858.1080@62.0.1474.864" timestamp="1621682660950" />
+    <state x="462" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1621684143066">
+      <screen x="62" y="0" width="1474" height="864" />
+    </state>
+    <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/1982.0.1858.1080@62.0.1474.864" timestamp="1621684143066" />
   </component>
 </project>

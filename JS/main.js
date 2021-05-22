@@ -132,6 +132,7 @@ function update_table_mat()
 	{
 		console.log(data);
 		fillTableMat(data);
+		//getDataMain(data);
 	}, function ()
 	{
 	})
@@ -165,6 +166,9 @@ function fillTableMat(mats) // функция добавления данных 
 		);
 		tbodyMat.append(tr);
 	})*/
+}
+function getDataMain(people){
+
 }
 
 
