@@ -7,14 +7,15 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Table</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel="stylesheet" href="css/style_loader.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<h1>
-			Providers
+			The Star Wars
 		</h1>
 		<p>
-			(An example table + detail view scenario)
+			(The Star Wars data: People and Vehicles)
 		</p>
 		<input type="search" class="light-table-filter filter" data-table="order-table" placeholder="Filter">
 		<h2></h2>
@@ -41,66 +42,6 @@
 					</tr>
 				</tfoot>
 				<tbody id="table-main">
-					<tr>
-						<td>99</td>
-						<td>Iacob Geaorgescu</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>533333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td class='select'>
-							<a class='button' href='#'>Show</a>
-						</td>
-					</tr>
-					<tr>
-						<td>99</td>
-						<td>Julius Neumann</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td class='select'>
-							<a class='button' href='#'>Show</a>
-						</td>
-					</tr>
-					<tr>
-						<td>99</td>
-						<td>Christoph Koller</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td class='select'>
-							<a class='button' href='#'>Show</a>
-						</td>
-					</tr>
-					<tr>
-						<td>99</td>
-						<td>Bram Lemmens</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td>333333</td>
-						<td class='select'>
-							<a class='button' href='#'>Show</a>
-						</td>
-					</tr>
 				</tbody>
 			</table>
 			<div class="detail">
@@ -132,48 +73,6 @@
 						</tr>
 					</tfoot>
 					<tbody id="table-vehicles">
-						<tr>
-							<td>99</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-						</tr>
-						<tr>
-							<td>99</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-						</tr>
-						<tr>
-							<td>99</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-							<td>333333</td>
-						</tr>
 					</tbody>
 				</table>
 				<div class='detail-nav'>
@@ -183,6 +82,9 @@
 				</div>
 			</div>
 		</main>
+		<div class="container">
+			<div class="loader">Loading...</div>
+		</div>
 		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 		<script src="js/index.js"></script>
 	</body>

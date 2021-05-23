@@ -3,8 +3,8 @@
 }
 
 html.open, body.open {
-  height: 100%;
   overflow: hidden;
+  margin-right: 9px;
 }
 
 html {
@@ -134,10 +134,10 @@ tfoot th {
   top: 0;
   left: 0;
   overflow: auto;
-  -moz-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
   -moz-transition: -moz-transform 0.3s ease-out;
   -o-transition: -o-transform 0.3s ease-out;
   -webkit-transition: -webkit-transform 0.3s ease-out;

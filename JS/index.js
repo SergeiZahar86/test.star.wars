@@ -1,11 +1,3 @@
-/*
-$('.button, .close').on('click', function(e) {
-  e.preventDefault();
-  $('.detail, html, body').toggleClass('open');
-});
-*/
-
-
 // фильтрация ====================================================================================================
 (function (document) {
     'use strict';
@@ -45,8 +37,11 @@ $('.button, .close').on('click', function(e) {
     });
 
 })(document);
-// ==============================================================================================================
-let Heros = [];
+
+
+// Загрузка данных ==============================================================================================================
+
+let Heroes = [];
 let Planets = [];
 let Vehicles = [];
 
@@ -92,54 +87,54 @@ class Vehicle {
     }
 }
 
-
 $(document).ready(function () {
-    update_table_heroes();
-    //getAllMat();
+    getAllData();
+    CloseModal();
 });
 
-function update_table_heroes() {
-    /*getAllHeroes(function (data) {
-        //console.log("1 : ++++  " + data);
-        //fillTableMain(data);
-        getDataMain(data);
-    }, function () {
-    })*/
-    getAllPlanets();
-    //getAllHeroes();
-
-}
-
-function fillTableMain(peopleData) // функция добавления данных в таблицу материалов
-{
-    var tbodyMain = $("#table-main"); // Получаем узел тела таблицы материалов
-    tbodyMain.empty();  // отчистка таблицы
-    $.each(peopleData, function (i, dat) // Перебираем
-    {
-        var tr = $('<tr>').append(
-            $('<td>').text(i + 1),
-            $('<td>').text(dat.name),
-            $('<td>').text(dat.height),
-            $('<td>').text(dat.mass),
-            $('<td>').text(dat.hair_color),
-            $('<td>').text(dat.skin_color),
-            $('<td>').text(dat.eye_color),
-            $('<td>').text(dat.birth_year),
-            $('<td>').text(dat.gender),
-            $('<td>').text(dat.homeworld),
-            $('<td class="select">').append(
-                $('<a class="button" href=\'#\'>').text("Show").attr("id", i)),
-        );
+function fillTableMain(peopleData) {
+    var tbodyMain = $("#table-main");
+    tbodyMain.empty();
+    $.each(peopleData, function (i, dat) {
+        if (dat.vehicles.length > 0) {
+            var tr = $('<tr>').append(
+                $('<td>').text(i + 1),
+                $('<td>').text(dat.name),
+                $('<td>').text(dat.height),
+                $('<td>').text(dat.mass),
+                $('<td>').text(dat.hair_color),
+                $('<td>').text(dat.skin_color),
+                $('<td>').text(dat.eye_color),
+                $('<td>').text(dat.birth_year),
+                $('<td>').text(dat.gender),
+                $('<td>').text(dat.homeworld),
+                $('<td class="select">').append(
+                    $('<a class="button" href=\'#\'>').text("Show").attr("id", i)),
+            );
+        } else {
+            var tr = $('<tr>').append(
+                $('<td>').text(i + 1),
+                $('<td>').text(dat.name),
+                $('<td>').text(dat.height),
+                $('<td>').text(dat.mass),
+                $('<td>').text(dat.hair_color),
+                $('<td>').text(dat.skin_color),
+                $('<td>').text(dat.eye_color),
+                $('<td>').text(dat.birth_year),
+                $('<td>').text(dat.gender),
+                $('<td>').text(dat.homeworld),
+                $('<td>').text(""),
+            );
+        }
         tbodyMain.append(tr);
     });
     OpenModal();
 }
-function fillTableVehicle(VehiclesData) // функция добавления данных в таблицу материалов
-{
-    let tbodyVehicles = $("#table-vehicles"); // Получаем узел тела таблицы материалов
-    tbodyVehicles.empty();  // отчистка таблицы
-    $.each(VehiclesData.vehicles, function (i, dat) // Перебираем
-    {
+
+function fillTableVehicle(VehiclesData) {
+    let tbodyVehicles = $("#table-vehicles");
+    tbodyVehicles.empty();
+    $.each(VehiclesData.vehicles, function (i, dat) {
         var tr = $('<tr>').append(
             $('<td>').text(i + 1),
             $('<td>').text(dat.name),
@@ -156,34 +151,10 @@ function fillTableVehicle(VehiclesData) // функция добавления �
         );
         tbodyVehicles.append(tr);
     });
-    OpenModal();
 }
 
-function getAllHeroes() {
-    $.ajax({
-        type: "GET",
-        url: "http://swapi.dev/api/people",
-        success: getDataMain,
-        //error: error
-    })
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        .then(getPageHeroes)
-        //.then(getAllHomeWorld)
-        //.then(aaaa)
-        .then(function (result) {
-            console.log(Heros);
-            console.log('end');
-        })
-    //return q;
-};
-
-function getAllPlanets() {
+function getAllData() {
+    visibleLoader();
     $.ajax({
         type: "GET",
         url: "http://swapi.dev/api/planets/",
@@ -195,11 +166,11 @@ function getAllPlanets() {
         .then(getPagePlanet)
         .then(getPagePlanet)
         .then(getPagePlanet)
-        .then(getPageVehicles1)
+        .then(getPageVehiclesFirst)
         .then(getPageVehicles)
         .then(getPageVehicles)
         .then(getPageVehicles)
-        .then(getPageHeroes1)
+        .then(getPageHeroesFirst)
         .then(getPageHeroes)
         .then(getPageHeroes)
         .then(getPageHeroes)
@@ -208,42 +179,22 @@ function getAllPlanets() {
         .then(getPageHeroes)
         .then(getPageHeroes)
         .then(getPageHeroes)
-
-        //.then(getAllHomeWorld)
-        //.then(aaaa)
         .then(function (result) {
             console.log(Planets);
             console.log(Vehicles);
-            console.log(Heros);
-            console.log('end1111');
-            fillTableMain(Heros);
+            console.log(Heroes);
+            console.log('end');
+            fillTableMain(Heroes);
         })
-};
-
-function getAllHomeWorld() {
-    console.log('aaaaaa');
-    for (let i = 0; i < Heros.length; i++) {
-        $.ajax({
-            type: "GET",
-            url: Heros[i].homeworld,
-            success: function (homeworld) {
-                Heros[i].homeworld = homeworld.name;
-                console.log('44444')
-            },
-        });
-    }
-    console.log(Heros);
-    console.log('end');
-    fillTableMain(Heros);
+        .then(visibleLoader);
 }
 
-
-function getPageHeroes1(result) {
+function getPageHeroesFirst(result) {
     console.log('fffff');
     return $.ajax({
         type: "GET",
         url: "http://swapi.dev/api/people",
-        success: getDataMain,
+        success: getDataHeroes,
         //error: error
     })
 }
@@ -253,12 +204,12 @@ function getPageHeroes(result) {
     return $.ajax({
         type: "GET",
         url: result.next,
-        success: getDataMain,
+        success: getDataHeroes,
         //error: error
     })
 }
 
-function getPageVehicles1(result) {
+function getPageVehiclesFirst(result) {
     console.log('eeee');
     return $.ajax({
         type: "GET",
@@ -288,19 +239,7 @@ function getPagePlanet(result) {
     })
 }
 
-/*this.name = name;
-this.model = model;
-this.manufacturer = manufacturer;
-this.cost_in_credits = cost_in_credits;
-this.length = length;
-this.max_atmosphering_speed = max_atmosphering_speed;
-this.crew = crew;
-this.passengers = passengers;
-this.cargo_capacity = cargo_capacity;
-this.consumables = consumables;
-this.vehicle_class = vehicle_class;*/
 function getDataVehicles(vehicles) {
-
     let vehiclesArray = vehicles.results
     $.each(vehiclesArray, function (key, val) {
         let vehicle = new Vehicle(val.name, val.model, val.manufacturer, val.cost_in_credits,
@@ -310,8 +249,7 @@ function getDataVehicles(vehicles) {
     });
 }
 
-function getDataMain(people) {
-
+function getDataHeroes(people) {
     let peopleArray = people.results
     $.each(peopleArray, function (key, val) {
         $.each(Planets, function (r, p) {
@@ -327,20 +265,13 @@ function getDataMain(people) {
                     })
                 })
                 hero.vehicles = vhcls;
-
-                Heros.push(hero);
+                Heroes.push(hero);
             }
         })
-
-
-        /*let hero = new Person(val.name, val.height, val.mass, val.hair_color,
-            val.skin_color, val.eye_color, val.birth_year, val.gender, val.homeworld, val.vehicles)
-        Heros.push(hero);*/
     });
 }
 
 function getDataPlanets(planets) {
-
     let planetsArray = planets.results
     $.each(planetsArray, function (key, val) {
         let planet = new Planet(val.name, val.url)
@@ -348,26 +279,25 @@ function getDataPlanets(planets) {
     });
 }
 
-function getAllData(people) {
-    let peopleArray = people.results
-    $.each(peopleArray, function (key, val) {
-        let hero = new Person(val.name, val.height, val.mass, val.hair_color,
-            val.skin_color, val.eye_color, val.birth_year, val.gender, val.homeworld, val.vehicles)
-        Heros.push(hero);
-    });
-}
-
 function OpenModal() {
-    $('.button, .close').on('click', function (e) {
-        let dd = e.target;
+    $('.button').on('click', function (e) {
         let ss = $(e.target).attr('id');
-        console.log(dd);
-        fillTableVehicle(Heros[ss]);
-        //console.log(ss);
-        e.preventDefault();
+        fillTableVehicle(Heroes[ss]);
         $('.detail, html, body').toggleClass('open');
+        e.preventDefault();
     });
 }
 
+function CloseModal() {
+    $('.close').on('click', function (e) {
+        $('.detail, html, body').toggleClass('open');
+        e.preventDefault();
+    });
+}
+
+function visibleLoader() {
+    $('.container').toggleClass('visible');
+    console.log("visibleContainer");
+}
 
 //====================================================================================================================
